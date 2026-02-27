@@ -19,7 +19,8 @@ def get_info():
     ydl_opts = {
         'skip_download': True,
         'quiet': True,
-        'no_warnings': True
+        'no_warnings': True,
+        'extractor_args': {'youtube': {'player_client': ['ios']}}
     }
 
     try:
@@ -95,7 +96,8 @@ def download_video():
         'merge_output_format': 'mp4',
         'ffmpeg_location': imageio_ffmpeg.get_ffmpeg_exe(),
         'quiet': True,
-        'no_warnings': True
+        'no_warnings': True,
+        'extractor_args': {'youtube': {'player_client': ['ios']}}
     }
 
     try:
